@@ -1,0 +1,246 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #fff8e1, #fff);
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #ffb300;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* HERO */
+.hero {
+  text-align: center;aw
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffca28, #ffa000);
+  color: white;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero {
+  position: relative;
+  height: 400px;
+  background: url("img/photo_2026-05-01_19-23-21.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.25); /* затемнение для читаемости */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.geo {
+  margin-top: 15px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 15px 30px;
+  border: none;
+  background: white;
+  color: #ff9800;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* КОНТАКТЫ */
+.contact-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  animation: fadeUp 1s ease;
+}
+
+.phone {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 22px;
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.phone:hover {
+  transform: scale(1.1);
+  color: #e65100;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  animation: fadeUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.delivery {
+  background: #fff3cd;
+  padding: 60px 20px;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.vk {
+  background: #4a76a8;
+}
+
+.tg {
+  background: #2AABEE;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #ffb300;
+  color: white;
+  margin-top: 40px;
+}
+
+/* АНИМАЦИИ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
