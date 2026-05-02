@@ -151,11 +151,15 @@ section h2 {
   position: relative;
   background: white;
   padding: 25px;
-  width: 220px;
+  width: 240px;
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
   transition: 0.3s;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
 }
 
 .card:hover {
@@ -163,7 +167,15 @@ section h2 {
 }
 
 .card h3 {
+  font-size: 18px;
   margin-bottom: 10px;
+  color: #222;
+}
+
+.desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
 }
 
 .status {
