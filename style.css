@@ -323,3 +323,20 @@ footer {
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.toast.show {
+  opacity: 1;
+}
