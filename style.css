@@ -293,12 +293,9 @@ footer {
 }
 
 .about-logo img {
-    width: 120px;
+    width: 140px;
     height: auto;
-    border-radius: 50%;
-    padding: 10px;
-    background: linear-gradient(135deg, #ffb300, #ff8f00);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: 0.3s;
 }
 
