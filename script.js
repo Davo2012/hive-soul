@@ -41,3 +41,55 @@ setInterval(() => {
     button.style.transform = "scale(1)";
   }, 300);
 }, 2000);
+
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    showToast("Товар пока недоступен 😔");
+  });
+});
+
+function showToast(text) {
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.innerText = text;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+    toast.remove();
+  }, 2500);
+}
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+
+    target.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("mousemove", e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    card.style.transform = `
+      rotateX(${(y - rect.height / 2) / 10}deg)
+      rotateY(${(x - rect.width / 2) / 10}deg)
+      scale(1.05)
+    `;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+  });
+});
