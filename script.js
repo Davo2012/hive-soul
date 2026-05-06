@@ -44,7 +44,7 @@ setInterval(() => {
 
 document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("click", () => {
-    showToast("Товара нету в наличии 😔");
+    showToast("Товара нет в наличии 😔");
   });
 });
 
