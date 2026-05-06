@@ -93,3 +93,9 @@ document.querySelectorAll(".card").forEach(card => {
     card.style.transform = "rotateX(0) rotateY(0) scale(1)";
   });
 });
+
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert("Подробной информации о продукте пока нет");
+  });
+});
